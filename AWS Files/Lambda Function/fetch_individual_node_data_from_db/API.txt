@@ -1,0 +1,36 @@
+API Link:
+https://ykdqit5b09.execute-api.ap-south-1.amazonaws.com/trial/fetch_data?
+
+API Request Format:
+1. Live Data:
+    cmd:live
+    nodeid:<5 digit node id>
+    epoch_time:<latest epoch_time in milliseconds>
+
+2. Historical Data:
+    cmd:hist
+    nodeid:<5 digit node id>
+    epoch_time:<latest epoch_time in milliseconds>
+    time_period:<8/24/7/1> # 8 => 8 hrs, 24 => 24 hrs, 7 => 7 days, 1 => 1 month
+
+3. Average Data:
+    cmd:avg
+    nodeid:<5 digit node id>
+    epoch_time:<latest epoch_time in milliseconds>
+    time_period:<8/24/7/1> # 8 => 8 hrs, 24 => 24 hrs, 7 => 7 days, 1 => 1 month
+
+4. CSV Data:
+    cmd:csv
+    nodeid:<5 digit node id>
+    epoch_time:<latest epoch_time in milliseconds>
+    time_period:<8/24/7/1> # 8 => 8 hrs, 24 => 24 hrs, 7 => 7 days, 1 => 1 month
+
+5. All Node Average Data:
+    cmd:combined_avg
+    nodes:<number of nodes for which average needs to be collected>
+    nodeid_0:<5 digit node 0 id>
+    nodeid_1:<5 digit node 1 id>
+    nodeid_2:<5 digit node 2 id>
+    nodeid_3:<5 digit node 3 id>
+    epoch_time:<latest epoch_time in milliseconds>
+    time_period:<8/24/7/1> # 8 => 8 hrs, 24 => 24 hrs, 7 => 7 days, 1 => 1 month
